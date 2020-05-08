@@ -10,7 +10,7 @@ import './App.css';
 // components
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import ArticleList from './pages/ArticleList';
+import ArticleListPage from './pages/ArticleListPage';
 import ArticlePage from './pages/ArticlePage';
 import NavBar from './navbar';
 
@@ -22,7 +22,7 @@ function App() {
         <div id="page-body">
           <Route path="/" component={HomePage} exact/>
           <Route path="/about" component={AboutPage} exact/>
-          <Route path="/article-list" component={ArticleList} exact/>
+          <Route path="/article-list" component={ArticleListPage} exact/>
           <Route path="/article/:name" component={ArticlePage} exact/>
         </div>
       </div>
