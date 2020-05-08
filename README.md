@@ -1,3 +1,10 @@
+# My Blog Linkedin Tutorial
+React: Creating and Hosting a Full-Stack Site
+By: Shaun Wassell
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

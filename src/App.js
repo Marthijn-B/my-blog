@@ -8,13 +8,23 @@ import {
 import './App.css';
 
 // components
-import HomePage from './pages/homepage';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ArticleList from './pages/ArticleList';
+import ArticlePage from './pages/ArticlePage';
+import NavBar from './navbar';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Route path="/" component={HomePage} exact/>
+        <NavBar />
+        <div id="page-body">
+          <Route path="/" component={HomePage} exact/>
+          <Route path="/about" component={AboutPage} exact/>
+          <Route path="/article-list" component={ArticleList} exact/>
+          <Route path="/article/:name" component={ArticlePage} exact/>
+        </div>
       </div>
     </Router>
   );
