@@ -5,6 +5,7 @@ import articleContent from './article-content';
 // components
 import ArticleList from '../components/ArticleList';
 import CommentsList from '../components/CommentsList';
+import UpvoteSection from '../components/UpvoteSection';
 // pages
 import NotFoundPage from './NotFoundPage';
 
@@ -37,7 +38,11 @@ const ArticlePage = ({ match }) => {
     <>
     {/* <> equal to <React.fragment> to bundle all elements to export */}
       <h1>{article.title}</h1>
-      <p>This article has been upvoted {articleInfo.upvote} times</p>
+      <UpvoteSection
+        articleName={name}
+        upvotes={articleInfo.upvote}
+        setArticleInfo={setArticleInfo}
+      />
       {article.content.map((paragraph,key) => (
         <p key={key}>{paragraph}</p>
       )) }
